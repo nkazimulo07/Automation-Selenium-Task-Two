@@ -7,7 +7,7 @@ namespace TestCases.Tests
     public class SortTests : BaseTest
     {
         [Test]
-        public void GivenYoureLoggedIn_WhenSortingTheProductFromTheMostExpensive_ProductSortedToPriceAscending()
+        public void GivenYouAreLoggedIn_WhenSortingTheProductFromTheLeastExpensive_ProductSortedToPriceAscending()
         {
             StoreApp.MainPage.clothesDropdown.Click();
             StoreApp.MainPage.shoesLink.Click();
@@ -16,7 +16,7 @@ namespace TestCases.Tests
             StoreApp.SortPage.isSorted = true;
             StoreApp.SortPage.list.Clear();
 
-            foreach (var item in StoreApp.SortPage.priceList1)
+            foreach (var item in StoreApp.SortPage.itemPricesList)
             {
                 if (item.Text != "")
                 {
@@ -41,7 +41,7 @@ namespace TestCases.Tests
         }
 
         [Test]
-        public void GivenYoureLoggedIn_WhenSortingTheProductFromTheMostExpensive_ProductSortedToPriceDescending()
+        public void GivenYouAreLoggedIn_WhenSortingTheProductFromTheMostExpensive_ProductSortedToPriceDescending()
         {
             StoreApp.MainPage.clothesDropdown.Click();
             StoreApp.MainPage.shoesLink.Click();
@@ -50,7 +50,7 @@ namespace TestCases.Tests
             StoreApp.SortPage.isSorted = true;
             StoreApp.SortPage.list.Clear();
 
-            foreach (var item in StoreApp.SortPage.priceList1)
+            foreach (var item in StoreApp.SortPage.itemPricesList)
             {
                 if (item.Text != "")
                 {

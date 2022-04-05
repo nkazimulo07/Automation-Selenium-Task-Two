@@ -15,6 +15,7 @@ namespace test07.Pages
         public IWebElement currencyDropdown => driver.FindElement(By.CssSelector("a.dropdown-toggle"));
         public IWebElement logoutLink => driver.FindElement(By.XPath("//*[@id='customer_menu_top']/li/a/div"));
         public IWebElement logoutLabel => driver.FindElement(By.XPath("//*[@id='customer_menu_top']/li/ul/li[10]"));
-        
+        public IWebElement facebookIcon => driver.FindElement(By.XPath("/ html / body / div / header / div[2] / div / div[4] / div / div / a[1]"));
+
     }
 }

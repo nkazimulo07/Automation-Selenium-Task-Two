@@ -11,7 +11,6 @@ namespace test07
 
         public BasePage(IWebDriver webDriver)
         {
-            // Wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
             driver = webDriver;
         }
 

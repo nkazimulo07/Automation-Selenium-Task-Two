@@ -13,10 +13,6 @@ namespace TestCases.Pages
         }
 
         public IWebElement itemPrice => driver.FindElement(By.ClassName("oneprice"));
-
-        private List<IWebElement> priceList1 => new List<IWebElement>(driver.FindElements(By.ClassName("price")));
-        private IWebElement priceList => driver.FindElement(By.Id("sort"));
-        private SelectElement priceDropdownList => new SelectElement(priceList);
         bool isSorted;
         List<decimal> list = new List<decimal>();
         public IWebElement euroCurrency => driver.FindElement(By.CssSelector(".currency > li:nth-child(1) > a"));

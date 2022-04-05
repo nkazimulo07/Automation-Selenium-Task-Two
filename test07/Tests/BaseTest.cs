@@ -11,8 +11,11 @@ namespace TestCases.Tests
 {
     public class BaseTest
     {
-        private IWebDriver driver;
+        public IWebDriver driver;
         Actions action;
+        public const string loginName = "nkaZee";
+        public const string password = "Nk@Z33";
+        
 
         [SetUp]
         public void Setup()
@@ -26,8 +29,8 @@ namespace TestCases.Tests
             action = new Actions(driver);
             StoreApp.MainPage.loginLink.Click();
 
-            StoreApp.LoginPage.loginNameTextbox.SendKeys("nkaZee");
-            StoreApp.LoginPage.passwordTextbox.SendKeys("Nk@Z33");
+            StoreApp.LoginPage.loginNameTextbox.SendKeys(loginName);
+            StoreApp.LoginPage.passwordTextbox.SendKeys(password);
             StoreApp.LoginPage.loginButton.Click();
 
         }

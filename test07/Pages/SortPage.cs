@@ -15,7 +15,7 @@ namespace TestCases.Pages
         public List<decimal> list = new List<decimal>();
         private IWebElement priceList => driver.FindElement(By.Id("sort"));
         public SelectElement priceDropdownList => new SelectElement(priceList);
-        public List<IWebElement> priceList1 => new List<IWebElement>(driver.FindElements(By.ClassName("price")));
+        public List<IWebElement> itemPricesList => new List<IWebElement>(driver.FindElements(By.ClassName("price")));
         public bool isSorted;
     }
 }
