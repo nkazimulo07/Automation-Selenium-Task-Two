@@ -9,6 +9,7 @@ namespace TestCases.Pages
         public static MainPage MainPage;
         public static CurrencyValidationPage CurrencyValidationPage;
         public static SortPage SortPage;
+        public static FacebookPage FacebookPage;
 
         public static void Init(IWebDriver driver)
         {
@@ -17,6 +18,7 @@ namespace TestCases.Pages
             LoginPage = new LoginPage(driver);
             CurrencyValidationPage = new CurrencyValidationPage(driver);
             SortPage = new SortPage(driver);
+            FacebookPage = new FacebookPage(driver);
         }
 
     }

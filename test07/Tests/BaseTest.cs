@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.IO;
 using System.Reflection;
@@ -12,6 +13,7 @@ namespace TestCases.Tests
     public class BaseTest
     {
         public IWebDriver driver;
+        public WebDriverWait Wait;
         Actions action;
         public const string loginName = "nkaZee";
         public const string password = "Nk@Z33";

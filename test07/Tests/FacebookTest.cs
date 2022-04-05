@@ -24,6 +24,8 @@ namespace TestCases.Tests
 
             Assert.AreEqual(facebookUrl, resultsUrl);
 
+            driver.SwitchTo().Window(driver.WindowHandles[0]);
+
         }
     }
 }
