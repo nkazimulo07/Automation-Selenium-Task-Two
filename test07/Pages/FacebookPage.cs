@@ -9,8 +9,7 @@ namespace TestCases.Pages
         {
 
         }
-        public IWebElement facebookLogo => driver.FindElement(By.XPath("//*[@id='content']/div/div/div/div[1]/div/img"));
+        public IWebElement facebookPage => driver.FindElement(By.Id("facebook"));
         
     }
 }
-

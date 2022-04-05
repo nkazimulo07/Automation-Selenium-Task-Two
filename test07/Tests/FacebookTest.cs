@@ -1,10 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TestCases.Pages;
 
 namespace TestCases.Tests
@@ -17,14 +13,15 @@ namespace TestCases.Tests
         public void GivenFacebookIcon_WhenClickingTheIcon_FacebookPageReturned()
         {
             StoreApp.MainPage.facebookIcon.Click();
-            var facebookUrl = "https://www.facebook.com/";
-            driver.SwitchTo().Window(driver.WindowHandles.Last());
-            var resultsUrl = driver.Url;
+            driver.SwitchTo().Window(driver.WindowHandles[1]);
+            Assert.IsTrue(StoreApp.FacebookPage.facebookPage.Displayed);
+
             driver.Close();
-
-            Assert.AreEqual(facebookUrl, resultsUrl);
-
             driver.SwitchTo().Window(driver.WindowHandles[0]);
+
+            //var resultsUrl = driver.Url;
+            //var facebookUrl = "https://www.facebook.com/";
+            //Assert.AreEqual(facebookUrl, resultsUrl);
 
         }
     }
