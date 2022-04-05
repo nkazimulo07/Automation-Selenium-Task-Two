@@ -20,10 +20,9 @@ namespace TestCases.Tests
             var facebookUrl = "https://www.facebook.com/";
             driver.SwitchTo().Window(driver.WindowHandles.Last());
             var resultsUrl = driver.Url;
+            driver.Close();
 
             Assert.AreEqual(facebookUrl, resultsUrl);
-            driver.SwitchTo().Window(driver.WindowHandles[0]);
-
 
         }
     }
