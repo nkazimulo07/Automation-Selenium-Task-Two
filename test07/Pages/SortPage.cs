@@ -11,7 +11,7 @@ namespace TestCases.Pages
         {
 
         }
-    
+
         public List<decimal> list = new List<decimal>();
         private IWebElement priceList => driver.FindElement(By.Id("sort"));
         public SelectElement priceDropdownList => new SelectElement(priceList);

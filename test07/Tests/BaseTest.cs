@@ -23,7 +23,7 @@ namespace TestCases.Tests
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
 
             StoreApp.Init(driver);
-            action =  new Actions(driver);
+            action = new Actions(driver);
             StoreApp.MainPage.loginLink.Click();
 
             StoreApp.LoginPage.loginNameTextbox.SendKeys("nkaZee");
@@ -37,7 +37,7 @@ namespace TestCases.Tests
         {
             action.MoveToElement(StoreApp.MainPage.logoutLink).Perform();
             StoreApp.MainPage.logoutLabel.Click();
-            
+
             driver.Dispose();
         }
     }

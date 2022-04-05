@@ -1,10 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using test07;
 
 namespace TestCases.Pages
@@ -15,6 +11,7 @@ namespace TestCases.Pages
         {
 
         }
+
         public IWebElement itemPrice => driver.FindElement(By.ClassName("oneprice"));
 
         private List<IWebElement> priceList1 => new List<IWebElement>(driver.FindElements(By.ClassName("price")));
