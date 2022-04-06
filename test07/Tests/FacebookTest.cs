@@ -1,14 +1,10 @@
 ﻿using NUnit.Framework;
-using OpenQA.Selenium;
-using System.Linq;
 using TestCases.Pages;
 
 namespace TestCases.Tests
 {
     public class FacebookTest : BaseTest
     {
-        //IWebDriver driver;
-
         [Test]
         public void GivenFacebookIcon_WhenClickingTheIcon_FacebookPageReturned()
         {

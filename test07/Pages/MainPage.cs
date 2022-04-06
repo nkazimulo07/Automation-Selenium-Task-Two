@@ -9,13 +9,13 @@ namespace test07.Pages
 
         }
 
-        public IWebElement loginLink => driver.FindElement(By.XPath("//*[@id='customer_menu_top']/li/a"));
-        public IWebElement clothesDropdown => driver.FindElement(By.XPath("//*[@id='categorymenu']/nav/ul/li[2]/a"));
-        public IWebElement shoesLink => driver.FindElement(By.XPath("//*[@id='maincontainer']/div/div/div/div/ul/li[1]/div/a"));
+        public IWebElement loginLink => driver.FindElement(By.XPath("//*[@id='customer_menu_top']//a[contains(.,'Login')]"));
+        public IWebElement clothesDropdown => driver.FindElement(By.XPath("//section[@id='categorymenu']//a[contains(.,'Apparel')]"));
+        public IWebElement shoesLink => driver.FindElement(By.XPath("//div[@id='maincontainer']//a[contains(.,'Shoes')]"));
         public IWebElement currencyDropdown => driver.FindElement(By.CssSelector("a.dropdown-toggle"));
-        public IWebElement logoutLink => driver.FindElement(By.XPath("//*[@id='customer_menu_top']/li/a/div"));
-        public IWebElement logoutLabel => driver.FindElement(By.XPath("//*[@id='customer_menu_top']/li/ul/li[10]"));
-        public IWebElement facebookIcon => driver.FindElement(By.XPath("/ html / body / div / header / div[2] / div / div[4] / div / div / a[1]"));
+        public IWebElement logoutLink => driver.FindElement(By.XPath("//ul[@id='customer_menu_top']//li[contains(.,'Welcome')]"));
+        public IWebElement logoutLabel => driver.FindElement(By.XPath("//ul[@id='customer_menu_top']//li[contains(.,'Logoff')]"));
+        public IWebElement facebookIcon => driver.FindElement(By.CssSelector("a.facebook"));
 
     }
 }
